@@ -1,0 +1,84 @@
+{
+    "recent_searches": [
+        {
+            "search_terms": [
+                "eye infection"
+            ],
+            "search_operator": "OR",
+            "search_source": "Google Scholar",
+            "max_results": 20
+        },
+        {
+            "search_terms": [
+                "headache"
+            ],
+            "search_operator": "OR",
+            "search_source": "Google Scholar",
+            "max_results": 10
+        },
+        {
+            "search_terms": [
+                "fiver"
+            ],
+            "search_operator": "OR",
+            "search_source": "Google Scholar",
+            "max_results": 10
+        },
+        {
+            "search_terms": [
+                "stroke"
+            ],
+            "search_operator": "OR",
+            "search_source": "PubMed",
+            "max_results": 2
+        },
+        {
+            "search_terms": [
+                "stroke"
+            ],
+            "search_operator": "OR",
+            "search_source": "Google Scholar",
+            "max_results": 10
+        },
+        {
+            "search_terms": [
+                "luckemia"
+            ],
+            "search_operator": "OR",
+            "search_source": "Google Scholar",
+            "max_results": 3
+        },
+        {
+            "search_terms": [
+                "luckemia"
+            ],
+            "search_operator": "OR",
+            "search_source": "Google Scholar",
+            "max_results": 3
+        },
+        {
+            "search_terms": [
+                "luckemia"
+            ],
+            "search_operator": "OR",
+            "search_source": "Google Scholar",
+            "max_results": 1
+        },
+        {
+            "search_terms": [
+                "anemia"
+            ],
+            "search_operator": "OR",
+            "search_source": "Google Scholar",
+            "max_results": 10
+        },
+        {
+            "search_terms": [
+                "anemia"
+            ],
+            "search_operator": "OR",
+            "search_source": "BOTH",
+            "max_results": 10
+        }
+    ]
+}
