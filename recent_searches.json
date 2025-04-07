@@ -2,83 +2,83 @@
     "recent_searches": [
         {
             "search_terms": [
-                "eye infection"
+                "maleria"
             ],
-            "search_operator": "OR",
-            "search_source": "Google Scholar",
-            "max_results": 20
-        },
-        {
-            "search_terms": [
-                "headache"
-            ],
-            "search_operator": "OR",
+            "search_operator": "AND",
             "search_source": "Google Scholar",
             "max_results": 10
         },
         {
             "search_terms": [
-                "fiver"
+                "cancer"
             ],
-            "search_operator": "OR",
-            "search_source": "Google Scholar",
+            "search_operator": "AND",
+            "search_source": "BOTH",
             "max_results": 10
         },
         {
             "search_terms": [
-                "stroke"
+                "Depression"
             ],
-            "search_operator": "OR",
+            "search_operator": "AND",
+            "search_source": "Google Scholar",
+            "max_results": 5
+        },
+        {
+            "search_terms": [
+                "Depression"
+            ],
+            "search_operator": "AND",
+            "search_source": "Google Scholar",
+            "max_results": 5
+        },
+        {
+            "search_terms": [
+                "Congestive"
+            ],
+            "search_operator": "AND",
+            "search_source": "Google Scholar",
+            "max_results": 5
+        },
+        {
+            "search_terms": [
+                "Congestive"
+            ],
+            "search_operator": "AND",
+            "search_source": "PubMed",
+            "max_results": 5
+        },
+        {
+            "search_terms": [
+                "Syphilis"
+            ],
+            "search_operator": "AND",
             "search_source": "PubMed",
             "max_results": 2
         },
         {
             "search_terms": [
-                "stroke"
+                "Syphilis"
             ],
-            "search_operator": "OR",
+            "search_operator": "AND",
             "search_source": "Google Scholar",
-            "max_results": 10
+            "max_results": 2
         },
         {
             "search_terms": [
-                "luckemia"
+                "Leishmaniasis"
             ],
-            "search_operator": "OR",
+            "search_operator": "AND",
             "search_source": "Google Scholar",
-            "max_results": 3
+            "max_results": 2
         },
         {
             "search_terms": [
-                "luckemia"
+                "Chlamydia"
             ],
-            "search_operator": "OR",
+            "search_operator": "AND",
             "search_source": "Google Scholar",
-            "max_results": 3
-        },
-        {
-            "search_terms": [
-                "luckemia"
-            ],
-            "search_operator": "OR",
-            "search_source": "Google Scholar",
-            "max_results": 1
-        },
-        {
-            "search_terms": [
-                "anemia"
-            ],
-            "search_operator": "OR",
-            "search_source": "Google Scholar",
-            "max_results": 10
-        },
-        {
-            "search_terms": [
-                "anemia"
-            ],
-            "search_operator": "OR",
-            "search_source": "BOTH",
-            "max_results": 10
+            "max_results": 2
         }
     ]
 }

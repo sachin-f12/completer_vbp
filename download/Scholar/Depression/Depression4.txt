@@ -1,0 +1,5 @@
+Title: The costs of depression
+Authors: [{'name': 'RC Kessler', 'link': 'https://scholar.google.com/citations?user=EicYvbwAAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=EicYvbwAAAAJ&engine=google_scholar_author&hl=en', 'author_id': 'EicYvbwAAAAJ'}]
+Year: Unknown Year
+Source: RC Kessler - The psychiatric Clinics of north America, 2011 - pmc.ncbi.nlm.nih.gov
+URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC3292769/pdf/nihms338335.pdf

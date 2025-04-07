@@ -3,7 +3,7 @@ from api import file_manager,article_retriever,get_metadata, Image_extractor,tab
 
 app = FastAPI()
 #file manager
-app.include_router(file_manager.router,prefix="/downloads",tags=["file"])
+app.include_router(file_manager.router,prefix="/downloads",tags=["file_manager"])
 #term extreactor
 app.include_router(term_extractor.router,prefix="/extract-terms",tags=["Term-Extractor"])
 # Article Retrieval Module

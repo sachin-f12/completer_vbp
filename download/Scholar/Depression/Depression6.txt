@@ -1,0 +1,5 @@
+Title: Depression research: where are we now?
+Authors: [{'name': 'S Lee', 'link': 'https://scholar.google.com/citations?user=SnwRkEkAAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=SnwRkEkAAAAJ&engine=google_scholar_author&hl=en', 'author_id': 'SnwRkEkAAAAJ'}, {'name': 'J Jeong', 'link': 'https://scholar.google.com/citations?user=8TfHIzMAAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=8TfHIzMAAAAJ&engine=google_scholar_author&hl=en', 'author_id': '8TfHIzMAAAAJ'}, {'name': 'SK Park', 'link': 'https://scholar.google.com/citations?user=VfFZPacAAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=VfFZPacAAAAJ&engine=google_scholar_author&hl=en', 'author_id': 'VfFZPacAAAAJ'}]
+Year: Unknown Year
+Source: S Lee, J Jeong, Y Kwak, SK Park - Molecular brain, 2010 - Springer
+URL: https://link.springer.com/content/pdf/10.1186/1756-6606-3-8.pdf

@@ -1,0 +1,5 @@
+Title: The three Es of cancer immunoediting
+Authors: [{'name': 'RD Schreiber', 'link': 'https://scholar.google.com/citations?user=kd-l1MoAAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=kd-l1MoAAAAJ&engine=google_scholar_author&hl=en', 'author_id': 'kd-l1MoAAAAJ'}]
+Year: Unknown Year
+Source: GP Dunn, LJ Old, RD Schreiber - Annu. Rev. Immunol., 2004 - annualreviews.org
+URL: https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=5092d36b8a05d815e9a5b144859dab2076395ead

@@ -1,32 +1,28 @@
-
-
 from enum import Enum
 from fastapi import APIRouter, HTTPException, Query
+import os
+import json
 from services.pubmed import fetch_pubmed_results
 from services.google_scholar import fetch_google_scholar_results
 from utils.search_utils import download_google_scholar_pdf
 from utils.pubmed_utils import download_pdf
 from utils.file_operations import rename_downloaded_files
-import os
-import json
 
 router = APIRouter()
-
 RECENT_SEARCHES_FILE = "recent_searches.json"
 
 class SearchSourceEnum(str, Enum):
-    google_scholar = "Google Scholar"
-    pubmed = "PubMed"
-    both = "BOTH"
+    GOOGLE_SCHOLAR = "Google Scholar"
+    PUBMED = "PubMed"
+    BOTH = "BOTH"
 
-def save_recent_search(search_data):
-    """Save the latest search query in a temporary JSON file (stores last 10 searches)."""
+def save_recent_search(search_data: dict):
+    """Save the latest search query in a JSON file (stores last 10 searches)."""
     try:
+        recent_searches = {"recent_searches": []}
         if os.path.exists(RECENT_SEARCHES_FILE):
             with open(RECENT_SEARCHES_FILE, "r") as file:
                 recent_searches = json.load(file)
-        else:
-            recent_searches = {"recent_searches": []}
 
         recent_searches["recent_searches"].insert(0, search_data)
         recent_searches["recent_searches"] = recent_searches["recent_searches"][:10]
@@ -42,33 +38,23 @@ async def get_recent_searches():
     try:
         if os.path.exists(RECENT_SEARCHES_FILE):
             with open(RECENT_SEARCHES_FILE, "r") as file:
-                recent_searches = json.load(file)
-            return recent_searches
+                return json.load(file)
         return {"recent_searches": []}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error fetching recent searches: {e}")
 
 @router.get("/search")
 async def search_articles(
-    search_terms: list[str] = Query(None, description="List of search terms"),
-    search_operator: str = Query("OR", enum=["AND", "OR"], description="Search operation mode"),
-    search_source: SearchSourceEnum = Query(SearchSourceEnum.both, description="Search source"),
+    search_terms: list[str] = Query(..., description="List of search terms"),
+    search_operator: str = Query("AND", enum=["AND", "OR"], description="Search operation mode"),
+    search_source: SearchSourceEnum = Query(SearchSourceEnum.BOTH, description="Search source"),
     max_results: int = Query(10, ge=1, le=100)
 ):
     try:
-        results = {"google_scholar": [], "pubmed": [], "stored_pdfs": []}
-
-        if not search_terms or len(search_terms) == 0:
+        if not search_terms:
             raise HTTPException(status_code=400, detail="At least one search term is required.")
 
-        if search_operator == "AND":
-            combined_search_term = " AND ".join(search_terms)
-            search_terms = [combined_search_term]
-        elif search_operator == "OR":
-            combined_search_term = " OR ".join(search_terms)
-            search_terms = [search_terms[0]]
-
-        selected_term = search_terms[0]
+        combined_search_term = f" {search_operator} ".join(search_terms)
         search_data = {
             "search_terms": search_terms,
             "search_operator": search_operator,
@@ -77,47 +63,22 @@ async def search_articles(
         }
         save_recent_search(search_data)
 
-        if search_source == SearchSourceEnum.both:
-            half_results = max_results // 2
-            google_scholar_results = await fetch_google_scholar_results(search_terms, half_results + (max_results % 2))
-            pubmed_results = await fetch_pubmed_results(search_terms, half_results)
+        results = {"google_scholar": [], "pubmed": [], "stored_pdfs": []}
 
-            pubmed_pdfs = [
-                download_pdf(pmcid, selected_term, search_source="BOTH") for pmcid in pubmed_results
-            ]
-            google_scholar_pdfs = [
-                download_google_scholar_pdf(url, selected_term, search_source="BOTH") for url in google_scholar_results
-            ]
+        if search_source in [SearchSourceEnum.BOTH, SearchSourceEnum.GOOGLE_SCHOLAR]:
+            gs_results = await fetch_google_scholar_results([combined_search_term], max_results // (2 if search_source == SearchSourceEnum.BOTH else 1))
+            gs_pdfs = [download_google_scholar_pdf(url, combined_search_term, metadata, search_source.value) for url, metadata in gs_results]
+            renamed_gs_files = rename_downloaded_files(combined_search_term, search_source.value)
+            results["google_scholar"] = [f for f in renamed_gs_files if f.endswith('.pdf')]
+            results["stored_pdfs"].extend(renamed_gs_files)
 
-            renamed_files = rename_downloaded_files(selected_term, "BOTH")
-
-            results["google_scholar"] = google_scholar_results
-            results["pubmed"] = pubmed_results
-            results["stored_pdfs"] = renamed_files  # Return renamed files instead of original ones
-
-        elif search_source == SearchSourceEnum.google_scholar:
-            google_scholar_results = await fetch_google_scholar_results(search_terms, max_results)
-            google_scholar_pdfs = [
-                download_google_scholar_pdf(url, selected_term, search_source="Google Scholar") for url in google_scholar_results
-            ]
-
-            renamed_files = rename_downloaded_files(selected_term, "Google Scholar")
-
-            results["google_scholar"] = google_scholar_results
-            results["stored_pdfs"] = renamed_files  # Return renamed files instead of original ones
-
-        elif search_source == SearchSourceEnum.pubmed:
-            pubmed_results = await fetch_pubmed_results(search_terms, max_results)
-            pubmed_pdfs = [
-                download_pdf(pmcid, selected_term, search_source="PubMed") for pmcid in pubmed_results
-            ]
-
-            renamed_files = rename_downloaded_files(selected_term, "PubMed")
-
-            results["pubmed"] = pubmed_results
-            results["stored_pdfs"] = renamed_files  # Return renamed files instead of original ones
+        if search_source in [SearchSourceEnum.BOTH, SearchSourceEnum.PUBMED]:
+            pm_results = await fetch_pubmed_results([combined_search_term], max_results // (2 if search_source == SearchSourceEnum.BOTH else 1))
+            pm_pdfs = [download_pdf(pmcid, combined_search_term, search_source.value) for pmcid in pm_results]
+            renamed_pm_files = rename_downloaded_files(combined_search_term, search_source.value)
+            results["pubmed"] = pm_results
+            results["stored_pdfs"].extend(renamed_pm_files)
 
         return results
-
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Internal Server Error: {str(e)}")

@@ -1,0 +1,5 @@
+Title: The age of cancer
+Authors: [{'name': 'RA DePinho', 'link': 'https://scholar.google.com/citations?user=x_BvwLUAAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=x_BvwLUAAAAJ&engine=google_scholar_author&hl=en', 'author_id': 'x_BvwLUAAAAJ'}]
+Year: Unknown Year
+Source: RA DePinho - Nature, 2000 - nature.com
+URL: https://rondepinho.com/wp-content/uploads/2018/07/11-The-Age-of-Cancer.pdf

@@ -1,0 +1,5 @@
+Title: The “cancer immunogram”
+Authors: [{'name': 'CU Blank', 'link': 'https://scholar.google.com/citations?user=GKHMZoAAAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=GKHMZoAAAAAJ&engine=google_scholar_author&hl=en', 'author_id': 'GKHMZoAAAAAJ'}, {'name': 'A Ribas', 'link': 'https://scholar.google.com/citations?user=I9HWc0sAAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=I9HWc0sAAAAJ&engine=google_scholar_author&hl=en', 'author_id': 'I9HWc0sAAAAJ'}, {'name': 'TN Schumacher', 'link': 'https://scholar.google.com/citations?user=8BDE8BcAAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=8BDE8BcAAAAJ&engine=google_scholar_author&hl=en', 'author_id': '8BDE8BcAAAAJ'}]
+Year: Unknown Year
+Source: CU Blank, JB Haanen, A Ribas, TN Schumacher - Science, 2016 - science.org
+URL: https://escholarship.org/content/qt1n83k1hm/qt1n83k1hm_noSplash_121fb9df5692791079f270206df75a02.pdf

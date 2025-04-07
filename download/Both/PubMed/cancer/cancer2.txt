@@ -1,0 +1,7 @@
+{
+    "Title": "Productivity losses from short-term work absence due to neoplasms in Poland",
+    "Authors": "",
+    "Journal": "Scientific Reports",
+    "Date": "Unknown Date",
+    "Abstract": "No Abstract Available"
+}

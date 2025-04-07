@@ -7,7 +7,7 @@ dowmload
 myenv/
 .env/
 *.env
-
+venv/
 # Cache files
 .cache/
 

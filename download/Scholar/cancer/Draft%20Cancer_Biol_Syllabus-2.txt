@@ -1,0 +1,5 @@
+Title: The biology of cancer
+Authors: [{'name': 'RA Weinberg', 'link': 'https://scholar.google.com/citations?user=1wq5H9oAAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=1wq5H9oAAAAJ&engine=google_scholar_author&hl=en', 'author_id': '1wq5H9oAAAAJ'}]
+Year: Unknown Year
+Source: RA Weinberg, RA Weinberg - 2006 - taylorfrancis.com
+URL: https://digitalmeasures.utep.edu/ai/gfrancia/schteach/Draft%20Cancer_Biol_Syllabus-2.pdf

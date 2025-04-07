@@ -1,3 +1,4 @@
+import json
 import requests
 from bs4 import BeautifulSoup
 import logging
@@ -5,7 +6,6 @@ from pathlib import Path
 import time
 import re
 from utils.file_operations import sanitize_filename
-
 PUBMED_SEARCH_URL = "https://www.ncbi.nlm.nih.gov/pmc/?term="
 BASE_URL = 'https://www.ncbi.nlm.nih.gov/pmc/articles/'
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'
@@ -14,7 +14,7 @@ RETRIES = 3
 BACKOFF_FACTOR = 0.3
 
 OUTPUT_DIR = Path("download/PubMed")
-# OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def create_session():
@@ -26,6 +26,7 @@ def create_session():
     return session
 
 def search_pubmed(term, page=1, retries=RETRIES, backoff_factor=BACKOFF_FACTOR):
+    
     url = f"{PUBMED_SEARCH_URL}{term.replace(' ', '+')}&page={page}"
     session = create_session()
     
@@ -120,54 +121,290 @@ def get_pdf_link(session, pmcid):
         logging.error(f"Error getting PDF link for {pmcid}: {e}")
         return None
 
+def extract_metadata(html_content):
+    soup = BeautifulSoup(html_content, "html.parser")
+    title = soup.find("h1").get_text(strip=True) if soup.find("h1") else "Unknown Title"
+    authors = ", ".join([a.get_text(strip=True) for a in soup.find_all("meta", attrs={"name": "citation_author"})])
+    journal = soup.find("meta", attrs={"name": "citation_journal_title"})
+    journal = journal["content"] if journal else "Unknown Journal"
+    date = soup.find("meta", attrs={"name": "citation_date"})
+    date = date["content"] if date else "Unknown Date"
+    abstract = soup.find("div", class_="abstract")
+    abstract = abstract.get_text(strip=True) if abstract else "No Abstract Available"
+    
+    return {
+        "Title": title,
+        "Authors": authors,
+        "Journal": journal,
+        "Date": date,
+        "Abstract": abstract
+    }
+    
+    
+
+
+# def download_pdf(pmcid, search_term, search_source="PubMed"):
+#     """Download the PDF, save metadata, and store it in a dynamically created search-term-based directory."""
+    
+#     # Sanitize search term to create a valid folder name
+#     safe_search_term = sanitize_filename(search_term)
+    
+#     # Determine correct storage directory
+#     if search_source == "BOTH":
+#         output_dir = Path(f"download/Both/PubMed/{safe_search_term}")
+#     else:
+#         output_dir = Path(f"download/PubMed/{safe_search_term}")
+    
+#     output_dir.mkdir(parents=True, exist_ok=True)
+    
+#     pdf_path = output_dir / f"{pmcid}.pdf"
+#     metadata_path = output_dir / f"{pmcid}.txt"
+    
+#     # Skip download if PDF already exists
+#     if pdf_path.exists() and pdf_path.stat().st_size > 1000:
+#         logging.info(f"PDF already exists: {pdf_path}")
+#         return str(pdf_path)
+    
+#     session = create_session()
+    
+#     try:
+#         # Fetch metadata and save it
+#         article_url = f"{BASE_URL}{pmcid}/"
+#         response = session.get(article_url, timeout=30)
+#         response.raise_for_status()
+#         metadata = extract_metadata(response.text)
+        
+#         with open(metadata_path, "w", encoding="utf-8") as f:
+#             json.dump(metadata, f, indent=4)
+        
+#         # Get PDF link
+#         pdf_url = get_pdf_link(session, pmcid)
+#         if not pdf_url:
+#             logging.error(f"Could not find PDF link for {pmcid}")
+#             return None
+        
+#         # Download PDF
+#         headers = {"User-Agent": USER_AGENT, "Accept": "application/pdf"}
+#         pdf_response = session.get(pdf_url, headers=headers, stream=True, timeout=30)
+#         pdf_response.raise_for_status()
+        
+#         with open(pdf_path, "wb") as f:
+#             for chunk in pdf_response.iter_content(chunk_size=CHUNK_SIZE):
+#                 if chunk:
+#                     f.write(chunk)
+        
+#         # Validate downloaded file
+#         if pdf_path.stat().st_size < 1000:
+#             pdf_path.unlink()
+#             logging.error(f"Downloaded file too small for {pmcid}")
+#             return None
+        
+#         logging.info(f"Successfully downloaded PDF: {pdf_path}")
+#         return str(pdf_path)
+    
+#     except requests.RequestException as e:
+#         logging.error(f"Failed to download PDF for {pmcid}: {e}")
+#         return None
+    
+#     finally:
+#         session.close()
+
+
+
+
+
+
 
 def download_pdf(pmcid, search_term, search_source="PubMed"):
-    """Download the PDF and store it in a dynamically created search-term-based directory."""
+    """Download the PDF, save metadata, and store it in a dynamically created search-term-based directory."""
     
-    # Sanitize the search term to create a valid folder name
+    # Sanitize search term to create a valid folder name
     safe_search_term = sanitize_filename(search_term)
-
+    
     # Determine correct storage directory
     if search_source == "BOTH":
         output_dir = Path(f"download/Both/PubMed/{safe_search_term}")
     else:
         output_dir = Path(f"download/PubMed/{safe_search_term}")
-
-    output_dir.mkdir(parents=True, exist_ok=True)  # Ensure directory exists
+    
+    output_dir.mkdir(parents=True, exist_ok=True)
+    
     pdf_path = output_dir / f"{pmcid}.pdf"
-
-    # Skip if already downloaded
+    metadata_path = output_dir / f"{pmcid}.txt"
+    
+    # Skip download if PDF already exists
     if pdf_path.exists() and pdf_path.stat().st_size > 1000:
         logging.info(f"PDF already exists: {pdf_path}")
         return str(pdf_path)
-
-    # Download process remains the same
+    
     session = create_session()
+    
     try:
+        # Fetch metadata
+        article_url = f"{BASE_URL}{pmcid}/"
+        response = session.get(article_url, timeout=30)
+        response.raise_for_status()
+        metadata = extract_metadata(response.text)
+        
+        # Get PDF link
         pdf_url = get_pdf_link(session, pmcid)
         if not pdf_url:
             logging.error(f"Could not find PDF link for {pmcid}")
             return None
-
-        headers = {'User-Agent': USER_AGENT, 'Accept': 'application/pdf'}
-        response = session.get(pdf_url, headers=headers, stream=True, timeout=30)
-        response.raise_for_status()
-
-        with open(pdf_path, 'wb') as f:
-            for chunk in response.iter_content(chunk_size=CHUNK_SIZE):
+        
+        # Download PDF
+        headers = {"User-Agent": USER_AGENT, "Accept": "application/pdf"}
+        pdf_response = session.get(pdf_url, headers=headers, stream=True, timeout=30)
+        pdf_response.raise_for_status()
+        
+        with open(pdf_path, "wb") as f:
+            for chunk in pdf_response.iter_content(chunk_size=CHUNK_SIZE):
                 if chunk:
                     f.write(chunk)
-
+        
+        # Validate downloaded file
         if pdf_path.stat().st_size < 1000:
             pdf_path.unlink()
             logging.error(f"Downloaded file too small for {pmcid}")
             return None
 
+        # **Save metadata ONLY if PDF is successfully downloaded**
+        with open(metadata_path, "w", encoding="utf-8") as f:
+            json.dump(metadata, f, indent=4)
+
         logging.info(f"Successfully downloaded PDF: {pdf_path}")
         return str(pdf_path)
-
-    except Exception as e:
+    
+    except requests.RequestException as e:
         logging.error(f"Failed to download PDF for {pmcid}: {e}")
         return None
+    
     finally:
         session.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# def download_pdf(pmcid, search_term, search_source="PubMed"):
+#     """Download the PDF and store it in a dynamically created search-term-based directory."""
+    
+#     # Sanitize the search term to create a valid folder name
+#     safe_search_term = sanitize_filename(search_term)
+
+#     # Determine correct storage directory
+#     if search_source == "BOTH":
+#         output_dir = Path(f"download/Both/PubMed/{safe_search_term}")
+#     else:
+#         output_dir = Path(f"download/PubMed/{safe_search_term}")
+
+#     output_dir.mkdir(parents=True, exist_ok=True)  # Ensure directory exists
+#     pdf_path = output_dir / f"{pmcid}.pdf"
+
+#     # Skip if already downloaded
+#     if pdf_path.exists() and pdf_path.stat().st_size > 1000:
+#         logging.info(f"PDF already exists: {pdf_path}")
+#         return str(pdf_path)
+
+#     # Download process remains the same
+#     session = create_session()
+#     try:
+#         pdf_url = get_pdf_link(session, pmcid)
+#         if not pdf_url:
+#             logging.error(f"Could not find PDF link for {pmcid}")
+#             return None
+
+#         headers = {'User-Agent': USER_AGENT, 'Accept': 'application/pdf'}
+#         response = session.get(pdf_url, headers=headers, stream=True, timeout=30)
+#         response.raise_for_status()
+
+#         with open(pdf_path, 'wb') as f:
+#             for chunk in response.iter_content(chunk_size=CHUNK_SIZE):
+#                 if chunk:
+#                     f.write(chunk)
+
+#         if pdf_path.stat().st_size < 1000:
+#             pdf_path.unlink()
+#             logging.error(f"Downloaded file too small for {pmcid}")
+#             return None
+
+#         logging.info(f"Successfully downloaded PDF: {pdf_path}")
+#         return str(pdf_path)
+
+#     except Exception as e:
+#         logging.error(f"Failed to download PDF for {pmcid}: {e}")
+#         return None
+#     finally:
+#         session.close()
+        
+
+
+
+
+# def download_pdf(pmcid, search_term, search_source="PubMed"):
+#     """Download the PDF and save metadata."""
+#     safe_search_term = sanitize_filename(search_term)
+#     output_dir = Path(f"download/PubMed/{safe_search_term}")
+#     output_dir.mkdir(parents=True, exist_ok=True)
+#     pdf_path = output_dir / f"{pmcid}.pdf"
+    
+#     if pdf_path.exists() and pdf_path.stat().st_size > 1000:
+#         logging.info(f"PDF already exists: {pdf_path}")
+#         return str(pdf_path)
+    
+#     session = create_session()
+#     article_url = f"{BASE_URL}{pmcid}/"
+    
+#     try:
+#         response = session.get(article_url, timeout=30)
+#         response.raise_for_status()
+#         metadata = extract_metadata(response.text)
+        
+#         metadata_path = output_dir / f"{pmcid}.txt"
+#         with open(metadata_path, "w", encoding="utf-8") as f:
+#             json.dump(metadata, f, indent=4)
+        
+#         pdf_url = get_pdf_link(session, pmcid)
+#         if not pdf_url:
+#             return None
+        
+#         headers = {"User-Agent": USER_AGENT, "Accept": "application/pdf"}
+#         pdf_response = session.get(pdf_url, headers=headers, stream=True, timeout=30)
+#         pdf_response.raise_for_status()
+        
+#         with open(pdf_path, "wb") as f:
+#             for chunk in pdf_response.iter_content(chunk_size=CHUNK_SIZE):
+#                 if chunk:
+#                     f.write(chunk)
+        
+#         if pdf_path.stat().st_size < 1000:
+#             pdf_path.unlink()
+#             return None
+        
+#         return str(pdf_path)
+    
+#     except requests.RequestException as e:
+#         logging.error(f"Failed to download PDF for {pmcid}: {e}")
+#         return None
+    
+#     finally:
+#         session.close()
