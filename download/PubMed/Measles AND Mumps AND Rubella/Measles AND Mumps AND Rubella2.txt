@@ -1,0 +1,11 @@
+{
+    "Title": "Prevention of measles, mumps and rubella: 40 years of global experience with M-M-RII",
+    "Authors": "Barbara J Kuter, Gary S Marshall, Jaime Fergie, Elvira Schmidt, Manjiri Pawaskar",
+    "Journal": "Human Vaccines & Immunotherapeutics",
+    "Date": "Unknown Date",
+    "Abstract": "Measles, mumps, and rubella are highly contagious diseases that caused significant global mortality and morbidity in the pre-vaccine era. Since its first approval in the United States over 40\u00a0years ago, M-M-RIIhas been used in >75 countries for prevention of these diseases. The vaccine has been part of immunization programs that have achieved dramatic global reductions in case numbers and mortality rates, as well as the elimination of measles and rubella in several countries and regions. This report summarizes over four decades of global safety, immunogenicity, efficacy, and effectiveness data for the vaccine. We include studies on the use of M-M-RIIin different age groups, concomitant use with other routine childhood vaccines, administration via different routes, persistence of immunity, and vaccine effectiveness during outbreaks of measles and mumps. We conclude that M-M-RIIis well tolerated and has shown consistently high performance during routine use in multiple countries, in randomized controlled trials with diverse designs, and in outbreak settings, including use as measles postexposure prophylaxis. Physicians, parents, and the public can continue to have a high degree of confidence in the use of M-M-RIIas a vital part of global public health programs.",
+    "Edited By": "Not Mentioned",
+    "Published Date": "2022 Feb 7",
+    "Citation": "Not Available",
+    "Contact": "Not Available"
+}

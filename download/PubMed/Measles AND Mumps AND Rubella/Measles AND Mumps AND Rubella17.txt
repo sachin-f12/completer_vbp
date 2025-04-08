@@ -1,0 +1,11 @@
+{
+    "Title": "The Clinical and Economic Impact of Measles-Mumps-Rubella Vaccinations to Prevent Measles Importations From US Pediatric Travelers Returning From Abroad",
+    "Authors": "Audrey C Bangs, Paul Gasta\u00f1aduy, Anne M Neilan, Amy Parker Fiebelkorn, Allison Taylor Walker, Sowmya R Rao, Edward T Ryan, Regina C LaRocque, Rochelle P Walensky, Emily P Hyle",
+    "Journal": "Journal of the Pediatric Infectious Diseases Society",
+    "Date": "Unknown Date",
+    "Abstract": "No Abstract Available",
+    "Edited By": "Not Mentioned",
+    "Published Date": "2022 Mar 25",
+    "Citation": "Not Available",
+    "Contact": "Not Available"
+}

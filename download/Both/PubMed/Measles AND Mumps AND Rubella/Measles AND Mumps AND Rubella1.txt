@@ -1,0 +1,11 @@
+{
+    "Title": "Standardization of measles, mumps and rubella assays to enable comparisons of seroprevalence data across 21 European countries and Australia",
+    "Authors": "A TISCHER, N ANDREWS, G KAFATOS, A NARDONE, G BERBERS, I DAVIDKIN, Y ABOUDY, J BACKHOUSE, C BARBARA, K BARTHA, B BRUCKOVA, A DUKS, A GRISKEVICIUS, L HESKETH, K JOHANSEN, L JONES, O KUERSTEINER, E LUPULESCU, Z MIHNEVA, M MRAZOVA, F DE ORY, K PROSENC, F SCHNEIDER, A TSAKRIS, M SMELHAUSOVA, R VRANCKX, M ZARVOU, E MILLER",
+    "Journal": "Epidemiology and Infection",
+    "Date": "Unknown Date",
+    "Abstract": "No Abstract Available",
+    "Edited By": "Not Mentioned",
+    "Published Date": "2007 Mar 30",
+    "Citation": "Not Available",
+    "Contact": "Not Available"
+}

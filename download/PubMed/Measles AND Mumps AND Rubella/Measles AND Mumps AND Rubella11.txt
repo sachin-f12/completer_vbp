@@ -1,0 +1,11 @@
+{
+    "Title": "Performance Characteristics of a Multiplex Flow Immunoassay for Detection of IgG-Class Antibodies to Measles, Mumps, Rubella, and Varicella-Zoster Viruses in Presumptively Immune Health Care Workers",
+    "Authors": "Elitza S Theel, Marisa Sorenson, Crystal Rahman, Dane Granger, Andrew Vaughn, Laura Breeher",
+    "Journal": "Journal of Clinical Microbiology",
+    "Date": "Unknown Date",
+    "Abstract": "Immunity to measles, mumps, rubella, and varicella-zoster viruses (VZV; MMRV) is a common condition of employment for health care workers (HCWs) to ensure compliance with national standards and state laws. When documentation of complete vaccination or laboratory-confirmed infection is not available, Advisory Committee on Immunization Practices (ACIP) criteria are used to guide vaccination or anti-MMRV IgG testing. We assessed the performance of the BioPlex 2200 MMRV IgG multiplex flow immunoassay (MFI; Bio-Rad Laboratories, Hercules, CA) and matched immunofluorescence assays (IFAs; MBL Bion, Des Plaines, IL) in 220 HCWs categorized by ACIP criteria for presumptive immunity to MMRV. Among HCWs presumptively immune to measles, mumps, rubella, and VZV, the Bio-Rad MFI was positive in 77.3, 85.4, 84.3, and 91.1% of HCWs, respectively. Comparatively, the Bion IFA was positive in 92.9, 91.1, and 93.5% of HCWs presumptively immune to measles, mumps, and VZV (a rubella IFA was unavailable). Among HCWs fully vaccinated against measles, mumps, and VZV, Bio-Rad MFI/Bion IFA positivity rates were 77.4%/93%, 84.8%/90.7%, and 54.5%/90.9%, respectively. The Bio-Rad MFI was positive in 83.7% of HCWs fully vaccinated against rubella. For HCWs whose last vaccination event occurred within 15\u2009years of enrollment, 83.3, 93.3, and 74.2% were positive by the Bio-Rad measles, mumps, and rubella IgG MFIs, respectively. We show significantly decreased Bio-Rad MFI sensitivity for detection of anti-measles and anti-mumps IgG-class antibodies in presumptively immune or fully vaccinated HCWs. Although negative results typically prompt revaccination, failure to recognize presumptive immunity in individuals unable to receive live, attenuated vaccines may have employment implications.",
+    "Edited By": "Editor:Yi-Wei Tangc",
+    "Published Date": "2020 Mar 25",
+    "Citation": "Not Available",
+    "Contact": "Not Available"
+}

@@ -1,0 +1,11 @@
+{
+    "Title": "Immunity against measles, mumps, rubella, and varicella among homeless individuals in Germany \u2014 A nationwide multi-center cross-sectional study",
+    "Authors": "Wiebke Graf, Franziska Bertram, Katharina Dost, Anna Brennecke, Veronika Kowalski, Victoria van R\u00fcth, Dominik Sebastian N\u00f6rz, Birgit Wulff, Benjamin Ondruschka, Klaus P\u00fcschel, Susanne Pfefferle, Marc L\u00fctgehetmann, Fabian Heinrich",
+    "Journal": "Frontiers in Public Health",
+    "Date": "Unknown Date",
+    "Abstract": "No Abstract Available",
+    "Edited By": "Edited by: Katri Jalava, NIHR Health Protection Research Unit in Gastrointestinal Infections, United KingdomReviewed by: Martyn Regan, The University of Manchester, United KingdomFilippo Quattrone, Sant'Anna School of Pisa, Italy\u2709*Correspondence: Fabian Heinrichfa.heinrich@uke.de\u2020ORCID: Fabian Heinrichorcid.org/0000-0002-2922-4863",
+    "Published Date": "2024 May 9",
+    "Citation": "Not Available",
+    "Contact": "Not Available"
+}

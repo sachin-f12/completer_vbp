@@ -1,0 +1,11 @@
+{
+    "Title": "Are Measles-Mumps-Rubella (MMR) Antibodies Friends or Foes for Covid-19 Disease?",
+    "Authors": "Azza Salamony, Yara Shamikh, Khaled Amer, Tarek Elnagdy, Mostafa Elnakib, Abd Allah Yehia, Wael Hassan, Maha Abdelsalam",
+    "Journal": "Archivum Immunologiae et Therapiae Experimentalis",
+    "Date": "Unknown Date",
+    "Abstract": "Many factors have been implicated in the pathogenesis and severity of COVID-19 pandemic. A wide variation in the susceptibility for SARS-CoV-2 infection among different population, gender and age has been observed. Multiple studies investigated the relationship between the antibody\u2019s titre of previously vaccinated individuals and the susceptibility of coronavirus infection, to find a rapid effective therapy for this pandemic. This study focused on the association between measles-mumps-rubella (MMR) antibodies titre and the severity of COVID-19 infection. We aimed to investigate the correlation between the antibody\u2019s titre of MMR and the SARS-CoV-2 infection susceptibility and disease severity, in a cohort of COVID-19 Egyptian patients, compared to a control group. MMR antibody titre was measured using enzyme Linked Immune Sorbent Assay; (ELISA) for 136 COVID-19 patients and 44 healthy individuals, as control group. There were high levels of measles and mumps antibodies titer in the deteriorating cases, which could not protect from SARS-CoV-2 infection. However, the rubella antibodies might protect from SARS-CoV-2 infection, but once the infection occurs, it may aggravate the risk of case deterioration. MMR antibodies could be used as a guideline for COVID-19 symptom-severity and, in turn, may be considered as an economic prognostic marker used for early protection from multiple autoimmune organ failure.",
+    "Edited By": "Not Mentioned",
+    "Published Date": "2023 Jun 21",
+    "Citation": "Not Available",
+    "Contact": "Not Available"
+}

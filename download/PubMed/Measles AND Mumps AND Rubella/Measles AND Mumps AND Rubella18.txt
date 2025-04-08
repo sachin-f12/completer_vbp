@@ -1,0 +1,11 @@
+{
+    "Title": "An Economic Analysis of Mumps Vaccination in Fiji: Static Model Simulation of Routine Measles\u2013Mumps\u2013Rubella (MMR) Vaccination Instead of Current Measles\u2013Rubella (MR) Vaccination",
+    "Authors": "Chunghyeon Oh, Eric Rafai, Yinseo Cho, Damin Jun, Seungman Cha",
+    "Journal": "International Journal of Environmental Research and Public Health",
+    "Date": "Unknown Date",
+    "Abstract": "Mumps remains endemic in Fiji, with 7802 cases reported between 2016 and 2018. The introduction of mumps vaccination has been discouraged due to perceptions of mumps as a self-limited disease and the perceived high cost of mumps vaccines. We estimated the benefits and costs of introducing a mumps vaccination program in Fiji. First, we estimated the burden of mumps and mumps-related complications in Fiji based on the reported cases in the Fiji National Notifiable Disease Surveillance System between 2016 and 2018. We then developed a static simulation model with stable mumps herd immunity after routine measles\u2013mumps\u2013rubella (MMR) vaccination. Finally, we compared the estimated economic burden of mumps with current MR vaccination and the assumptive burden of the stable-state simulation model after routine MMR vaccination. The benefit\u2013cost ratios (BCRs) were 2.65 from the taxpayer view and 3.00 from the societal view. A probabilistic sensitivity analysis indicated that the 1st and 99th percentiles of BCRs were 1.4 and 5.2 from the taxpayer\u2019s perspective and 1.5 and 6.1 from the societal perspective. From both the taxpayer and societal perspectives, the probability of BCRs greater than 1.0 was 100%. A routine MMR program has value for money from both the taxpayer and societal perspectives. MMR vaccination should be urgently introduced in Fiji.",
+    "Edited By": "Editor:Paul B Tchounwou",
+    "Published Date": "2022 Feb 7",
+    "Citation": "Not Available",
+    "Contact": "Not Available"
+}

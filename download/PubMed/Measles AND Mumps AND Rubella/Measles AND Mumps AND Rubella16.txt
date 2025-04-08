@@ -1,0 +1,11 @@
+{
+    "Title": "Research priorities for global measles and rubella control and eradication",
+    "Authors": "James L Goodson, Susan Y Chu, Paul A Rota, William J Moss, David A Featherstone, Maya Vijayaraghavan, Kimberly M Thompson, Rebecca Martin, Susan Reef, Peter M Strebel",
+    "Journal": "Vaccine",
+    "Date": "Unknown Date",
+    "Abstract": "In 2010, an expert advisory panel convened by the World Health Organization to assess the feasibility of measles eradication concluded that (1) measles can and should be eradicated, (2) eradication by 2020 is feasible if measurable progress is made toward existing 2015 measles mortality reduction targets, (3) measles eradication activities should occur in the context of strengthening routine immunization services, and (4) measles eradication activities should be used to accelerate control and elimination of rubella and congenital rubella syndrome (CRS). The expert advisory panel also emphasized the critical role of research and innovation in any disease control or eradication program. In May 2011, a meeting was held to identify and prioritize research priorities to support measles and rubella/CRS control and potential eradication activities. This summary presents the questions identified by the meeting participants and their relative priority within the following categories: (1) measles epidemiology, (2) vaccine development and alternative vaccine delivery, (3) surveillance and laboratory methods, (4) immunization strategies, (5) mathematical modeling and economic analyses, and (6) rubella/CRS control and elimination.",
+    "Edited By": "Not Mentioned",
+    "Published Date": "2012 Apr 28",
+    "Citation": "Not Available",
+    "Contact": "Not Available"
+}

@@ -1,0 +1,5 @@
+Title: Seroprevalences of specific IgG antibodies to measles, mumps, and rubella in Korean infants
+Authors: [{'name': 'HW Kim', 'link': 'https://scholar.google.com/citations?user=Qg-aksYAAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=Qg-aksYAAAAJ&engine=google_scholar_author&hl=en', 'author_id': 'Qg-aksYAAAAJ'}]
+Year: Unknown Year
+Source: HK Cho, H Lee, HW Kim, SS Kim… - Journal of Korean …, 2016 - synapse.koreamed.org
+URL: https://synapse.koreamed.org/upload/synapsedata/pdfdata/0063jkms/jkms-31-1957.pdf

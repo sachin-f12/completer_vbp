@@ -1,0 +1,11 @@
+{
+    "Title": "Immunity to Measles, Mumps, and Rubella in US Children With Perinatal HIV Infection or Perinatal HIV Exposure Without Infection",
+    "Authors": "George K Siberry, Kunjal Patel, William J Bellini, Brad Karalius, Murli U Purswani, Sandra K Burchett, William A Meyer, III, Sun Bae Sowers, Angela Ellis, Russell B Van Dyke",
+    "Journal": "Clinical Infectious Diseases: An Official Publication of the Infectious Diseases Society of America",
+    "Date": "Unknown Date",
+    "Abstract": "Background.Children with perinatal human immunodeficiency virus (HIV) infection (PHIV) may not be protected against measles, mumps, and rubella (MMR) because of impaired initial vaccine response or waning immunity. Our objectives were to estimate seroimmunity in PHIV-infected and perinatally HIV-exposed but uninfected (HEU) children and identify predictors of immunity in the PHIV cohort.",
+    "Edited By": "Not Mentioned",
+    "Published Date": "2015 Jun 9",
+    "Citation": "Not Available",
+    "Contact": "Not Available"
+}

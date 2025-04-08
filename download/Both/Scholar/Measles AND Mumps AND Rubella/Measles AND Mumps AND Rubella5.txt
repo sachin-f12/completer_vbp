@@ -1,0 +1,5 @@
+Title: Interpreting serological surveys using mixture models: the seroepidemiology of measles, mumps and rubella in England and Wales at the beginning of the 21st …
+Authors: [{'name': 'R Pebody', 'link': 'https://scholar.google.com/citations?user=4-l5MBAAAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=4-l5MBAAAAAJ&engine=google_scholar_author&hl=en', 'author_id': '4-l5MBAAAAAJ'}]
+Year: Unknown Year
+Source: AJ Vyse, NJ Gay, LM Hesketh, R Pebody… - Epidemiology & …, 2006 - cambridge.org
+URL: https://www.cambridge.org/core/services/aop-cambridge-core/content/view/00AE1DCE2EF3DE61D5A5A3501A6477A7/S0950268806006340a.pdf/interpreting_serological_surveys_using_mixture_models_the_seroepidemiology_of_measles_mumps_and_rubella_in_england_and_wales_at_the_beginning_of_the_21st_century.pdf

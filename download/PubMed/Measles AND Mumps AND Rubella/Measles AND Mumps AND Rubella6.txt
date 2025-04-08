@@ -1,0 +1,11 @@
+{
+    "Title": "A review of safety and immunogenicity of a novel measles, mumps, rubella (MMR) vaccine",
+    "Authors": "Nitin Shah, Apurba Ghosh, Kishore Kumar, Trayambak Dutta, Manish Mahajan",
+    "Journal": "Human Vaccines & Immunotherapeutics",
+    "Date": "Unknown Date",
+    "Abstract": "Measles, mumps, and rubella (MMR) are highly infectious viral diseases affecting young children and have high secondary attack rates. Present MMR vaccines show consistent seroconversion rates for anti-measles and anti-rubella antibodies with variable responses for anti-mumps antibodies. Most common strains for MMR vaccines, currently available in India, are the Edmonston-Zagreb measles strain, Leningrad Zagreb (L-Z) mumps strain, and the RA 27/3 rubella strain. L-Z strain of mumps virus has been found to be associated with aseptic meningitis by different studies from different parts of the world including India. Recently, a novel freeze-dried MMR vaccine developed by Zydus Lifesciences (Zyvac MMR) contains Edmonston Zagreb measles strain, Hoshino mumps strain, and RA 27/3 rubella strain. The Hoshino strain is WHO approved and was found to induce interferon gamma production. This review article aims to provide a comprehensive appraisal of the data available on the safety and immunogenicity of the novel MMR vaccine.",
+    "Edited By": "Not Mentioned",
+    "Published Date": "2024 Jan 18",
+    "Citation": "Not Available",
+    "Contact": "Not Available"
+}

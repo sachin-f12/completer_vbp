@@ -1,0 +1,11 @@
+{
+    "Title": "Immune response to co-administration of measles, mumps, and rubella (MMR), and yellow fever vaccines: a randomized non-inferiority trial among one-year-old children in Argentina",
+    "Authors": "Carla Vizzotti, Jennifer B Harris, Anal\u00eda Aquino, Carolina Ranca\u00f1o, Cristian Biscayart, Romina Bonaventura, Andrea Pontoriero, Elsa Baumeister, Maria Cecilia Freire, Mirta Magari\u00f1os, Blanca Duarte, Gavin Grant, Susan Reef, Janeen Laven, Kathleen A Wannemuehler, Alba Maria Ropero Alvarez, J Erin Staples",
+    "Journal": "BMC Infectious Diseases",
+    "Date": "Unknown Date",
+    "Abstract": "No Abstract Available",
+    "Edited By": "Not Mentioned",
+    "Published Date": "2023 Mar 17",
+    "Citation": "Not Available",
+    "Contact": "Not Available"
+}

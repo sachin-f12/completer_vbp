@@ -1,0 +1,11 @@
+{
+    "Title": "Vaccines for measles, mumps, rubella, and varicella in children",
+    "Authors": "Carlo Di Pietrantonj, Alessandro Rivetti, Pasquale Marchione, Maria Grazia Debalini, Vittorio Demicheli",
+    "Journal": "The Cochrane Database of Systematic Reviews",
+    "Date": "Unknown Date",
+    "Abstract": "No Abstract Available",
+    "Edited By": "Editor:Cochrane Acute Respiratory Infections Group",
+    "Published Date": "2021 Nov 22",
+    "Citation": "Not Available",
+    "Contact": "Not Available"
+}

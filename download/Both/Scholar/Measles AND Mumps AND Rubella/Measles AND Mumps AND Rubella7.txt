@@ -1,0 +1,5 @@
+Title: The two-dose measles, mumps, and rubella (MMR) immunisation schedule: factors affecting maternal intention to vaccinate.
+Authors: [{'name': 'M Pareek', 'link': 'https://scholar.google.com/citations?user=f4LcLwIAAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=f4LcLwIAAAAJ&engine=google_scholar_author&hl=en', 'author_id': 'f4LcLwIAAAAJ'}, {'name': 'HM Pattison', 'link': 'https://scholar.google.com/citations?user=J031fmMAAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=J031fmMAAAAJ&engine=google_scholar_author&hl=en', 'author_id': 'J031fmMAAAAJ'}]
+Year: Unknown Year
+Source: M Pareek, HM Pattison - British Journal of General Practice, 2000 - bjgp.org
+URL: https://bjgp.org/content/bjgp/50/461/969.full.pdf

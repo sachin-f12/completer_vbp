@@ -1,0 +1,11 @@
+{
+    "Title": "Resurgence risk for measles, mumps and rubella in France in 2018 and 2020",
+    "Authors": "Guillaume B\u00e9raud, Steven Abrams, Philippe Beutels, Benoit Dervaux, Niel Hens",
+    "Journal": "Eurosurveillance",
+    "Date": "Unknown Date",
+    "Abstract": "No Abstract Available",
+    "Edited By": "Not Mentioned",
+    "Published Date": "2018 Jun 21",
+    "Citation": "Not Available",
+    "Contact": "Not Available"
+}

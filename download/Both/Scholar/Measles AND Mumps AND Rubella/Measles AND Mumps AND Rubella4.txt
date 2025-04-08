@@ -1,0 +1,5 @@
+Title: Detection of serum antibodies against measles, mumps and rubella after primary measles, mumps and rubella (MMR) vaccination in children
+Authors: [{'name': 'SR Tabatabaei', 'link': 'https://scholar.google.com/citations?user=9zvS0xkAAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=9zvS0xkAAAAJ&engine=google_scholar_author&hl=en', 'author_id': '9zvS0xkAAAAJ'}, {'name': 'AR Esteghamati', 'link': 'https://scholar.google.com/citations?user=D_LinO4AAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=D_LinO4AAAAJ&engine=google_scholar_author&hl=en', 'author_id': 'D_LinO4AAAAJ'}]
+Year: Unknown Year
+Source: SR Tabatabaei, AR Esteghamati, F Shiva… - Archives of Iranian …, 2013 - journalaim.com
+URL: https://journalaim.com/PDF/33_jan2013_0012.pdf

@@ -1,0 +1,11 @@
+{
+    "Title": "One single-center serological survey on measles, rubella and mumps antibody levels of people in Youyang, China",
+    "Authors": "Qing Wang, Xiaoping Cheng, Dandan Liu, Changhui Chen, Kaihu Yao",
+    "Journal": "Human Vaccines & Immunotherapeutics",
+    "Date": "Unknown Date",
+    "Abstract": "Although measles, rubella and mumps elimination had achieved great progress in recent years, outbreaks were still reported worldwide. Serological surveillance on the remaining susceptibility in the population is essential to evaluate the preventive policy, estimate the current risk of infection, and predict evolutions in the future. In this study, we aimed to investigate the prevalence of seropositivity of antibodies against measles, rubella and mumps in a population of all ages in Youyang, southwest China. A cross-sectional hospital-based study was conducted among 657 cases who attended to Youyang Hospital from Sep 2018 to Aug 2019. Sero IgG antibodies were measured by ELISA. No difference in the seropositivity of antibodies against measles, rubella and mumps was found between neither urban vs. rural, nor male vs. female. The overall seropositivity of anti-measles, rubella, mumps IgG antibodies was 81.1% (95% CI: 78.0\u201383.9), 65.9% (95% CI: 62.2\u201369.4) and 63.2% (95% CI: 59.4\u201366.8), respectively. The IgG seropositivity varied with age significantly. In this study, the seropositivity of antibodies against measles, rubella and mumps among the participants was insufficient in the population, especially among infants, teenagers and productive women, who were suggested to booster the immunity. To better control and eliminate measles, mumps and rubella-related diseases, nation-wide active laboratory-supported surveillance, outbreak investigation and revaccination for vulnerable population are needed.",
+    "Edited By": "Not Mentioned",
+    "Published Date": "2021 Oct 8",
+    "Citation": "Not Available",
+    "Contact": "Not Available"
+}

@@ -1,0 +1,11 @@
+{
+    "Title": "Correction",
+    "Authors": "Unknown Authors",
+    "Journal": "Human Vaccines & Immunotherapeutics",
+    "Date": "Unknown Date",
+    "Abstract": "No Abstract Available",
+    "Edited By": "Not Mentioned",
+    "Published Date": "2024 Jul 19",
+    "Citation": "Not Available",
+    "Contact": "Not Available"
+}

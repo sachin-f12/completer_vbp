@@ -1,0 +1,11 @@
+{
+    "Title": "Seroprevalence of Measles-, Mumps-, and Rubella-specific antibodies in the German adult population \u2013 cross-sectional analysis of the German Health Interview and Examination Survey for Adults (DEGS1)",
+    "Authors": "Nicole Friedrich, Christina Poethko-M\u00fcller, Ronny Kuhnert, Dorothea Matysiak-Klose, Judith Koch, Ole Wichmann, Sabine Santibanez, Annette Mankertz",
+    "Journal": "The Lancet Regional Health - Europe",
+    "Date": "Unknown Date",
+    "Abstract": "No Abstract Available",
+    "Edited By": "Not Mentioned",
+    "Published Date": "2021 Jun 5",
+    "Citation": "Not Available",
+    "Contact": "Not Available"
+}

@@ -1,0 +1,11 @@
+{
+    "Title": "Immunogenicity and safety of the new MMR vaccine containing measles AIK-C, rubella Takahashi, and mumps RIT4385 strains in Japanese children: a randomized phase I/II clinical trial",
+    "Authors": "Tetsuo Nakayama, Masahiro Eda, Motonori Hirano, Wakako Goto",
+    "Journal": "Human Vaccines & Immunotherapeutics",
+    "Date": "Unknown Date",
+    "Abstract": "Domestic measles, mumps, and rubella combined (MMR) vaccines were discontinued in 1993 in Japan because of the unexpected high incidence of aseptic meningitis. The introduction of an effective MMR vaccine with lower reactogenicity has been expected. A new MMR vaccine (JVC-001) was developed, using mumps RIT4385 strain in combination with Japanese measles AIK-C strain and rubella Takahashi strain (MR) vaccine. An open-label, randomized, phase I/II clinical study was conducted in 100 healthy Japanese children equally randomized to a JVC-001 group and an MR with monovalent mumps vaccine (Hoshino strain) group. Immunogenicity was assessed using a neutralization test (NT) for measles, hemagglutination inhibition (HI) test for rubella, and NT and enzyme-linked immune-sorbent assay (ELISA) for mumps strain with different genotypes (genotype A, B, D and G) on Day 0 and Day 42\u201356. Solicited and unsolicited adverse events (AEs) were recorded. Seroconversion rates of measles and rubella were both 100%. JVC-001 induced higher immunogenicity against mumps virus genotype G with seroconversion rate of 77.1% (95% confidence interval [CI]: 62.7\u201388.0%) compared to 65.3% (95% CI: 50.4\u201378.3%) in the control group. Geometric mean titer (GMT) was 12.5 (95% CI: 8.6\u201318.3) in the JVC-001 group and 7.1 (95% CI: 5.0\u201310.1) in the control group. JVC-001 also induced good immunogenicity against other genotypes (A, B and D). There was no apparent difference in the incidence of AEs between JVC-001 and the control groups. JVC-001 is safe and induces effective immunogenicity against measles, mumps, and rubella compared with the currently marketed vaccines in Japan.",
+    "Edited By": "Not Mentioned",
+    "Published Date": "2019 Apr 22",
+    "Citation": "Not Available",
+    "Contact": "Not Available"
+}

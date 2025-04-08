@@ -2,6 +2,36 @@
     "recent_searches": [
         {
             "search_terms": [
+                "Measles",
+                "Mumps",
+                "Rubella"
+            ],
+            "search_operator": "AND",
+            "search_source": "BOTH",
+            "max_results": 20
+        },
+        {
+            "search_terms": [
+                "Measles",
+                "Mumps",
+                "Rubella"
+            ],
+            "search_operator": "AND",
+            "search_source": "PubMed",
+            "max_results": 20
+        },
+        {
+            "search_terms": [
+                "Measles",
+                "Mumps",
+                "Rubella"
+            ],
+            "search_operator": "AND",
+            "search_source": "Google Scholar",
+            "max_results": 20
+        },
+        {
+            "search_terms": [
                 "Chlamydia"
             ],
             "search_operator": "AND",
@@ -51,30 +81,6 @@
         {
             "search_terms": [
                 "ebolla"
-            ],
-            "search_operator": "AND",
-            "search_source": "PubMed",
-            "max_results": 20
-        },
-        {
-            "search_terms": [
-                "ebola"
-            ],
-            "search_operator": "AND",
-            "search_source": "PubMed",
-            "max_results": 20
-        },
-        {
-            "search_terms": [
-                "ebola"
-            ],
-            "search_operator": "AND",
-            "search_source": "PubMed",
-            "max_results": 20
-        },
-        {
-            "search_terms": [
-                "ebola"
             ],
             "search_operator": "AND",
             "search_source": "PubMed",

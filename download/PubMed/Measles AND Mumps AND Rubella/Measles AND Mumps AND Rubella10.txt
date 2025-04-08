@@ -1,0 +1,11 @@
+{
+    "Title": "Assessing seropositivity of MMR antibodies in individuals aged 2\u201322: evaluating routine vaccination effectiveness after the 2003 mass campaign-a study from Iran\u2019s National Measles Laboratory",
+    "Authors": "Fateme Ghafoori, Talat Mokhtari-Azad, Abbas Rahimi Foroushani, Mohammad Farahmand, Azade shadab, Vahid Salimi",
+    "Journal": "BMC Infectious Diseases",
+    "Date": "Unknown Date",
+    "Abstract": "No Abstract Available",
+    "Edited By": "Not Mentioned",
+    "Published Date": "2024 Jul 12",
+    "Citation": "Not Available",
+    "Contact": "Not Available"
+}

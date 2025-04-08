@@ -1,0 +1,5 @@
+Title: Non-specific effects of measles, mumps, and rubella (MMR) vaccination in high income setting: population based cohort study in the Netherlands
+Authors: [{'name': 'SMAJ Tielemans', 'link': 'https://scholar.google.com/citations?user=Jb76pnkAAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=Jb76pnkAAAAJ&engine=google_scholar_author&hl=en', 'author_id': 'Jb76pnkAAAAJ'}, {'name': 'SJM Hahné', 'link': 'https://scholar.google.com/citations?user=IjIZHSYAAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=IjIZHSYAAAAJ&engine=google_scholar_author&hl=en', 'author_id': 'IjIZHSYAAAAJ'}]
+Year: Unknown Year
+Source: SMAJ Tielemans, HE de Melker, SJM Hahné… - bmj, 2017 - bmj.com
+URL: https://www.bmj.com/content/bmj/358/bmj.j3862.full.pdf
