@@ -2,83 +2,83 @@
     "recent_searches": [
         {
             "search_terms": [
-                "maleria"
-            ],
-            "search_operator": "AND",
-            "search_source": "Google Scholar",
-            "max_results": 10
-        },
-        {
-            "search_terms": [
-                "cancer"
-            ],
-            "search_operator": "AND",
-            "search_source": "BOTH",
-            "max_results": 10
-        },
-        {
-            "search_terms": [
-                "Depression"
-            ],
-            "search_operator": "AND",
-            "search_source": "Google Scholar",
-            "max_results": 5
-        },
-        {
-            "search_terms": [
-                "Depression"
-            ],
-            "search_operator": "AND",
-            "search_source": "Google Scholar",
-            "max_results": 5
-        },
-        {
-            "search_terms": [
-                "Congestive"
-            ],
-            "search_operator": "AND",
-            "search_source": "Google Scholar",
-            "max_results": 5
-        },
-        {
-            "search_terms": [
-                "Congestive"
-            ],
-            "search_operator": "AND",
-            "search_source": "PubMed",
-            "max_results": 5
-        },
-        {
-            "search_terms": [
-                "Syphilis"
-            ],
-            "search_operator": "AND",
-            "search_source": "PubMed",
-            "max_results": 2
-        },
-        {
-            "search_terms": [
-                "Syphilis"
-            ],
-            "search_operator": "AND",
-            "search_source": "Google Scholar",
-            "max_results": 2
-        },
-        {
-            "search_terms": [
-                "Leishmaniasis"
-            ],
-            "search_operator": "AND",
-            "search_source": "Google Scholar",
-            "max_results": 2
-        },
-        {
-            "search_terms": [
                 "Chlamydia"
             ],
             "search_operator": "AND",
             "search_source": "Google Scholar",
-            "max_results": 2
+            "max_results": 20
+        },
+        {
+            "search_terms": [
+                "Smallpox"
+            ],
+            "search_operator": "AND",
+            "search_source": "Google Scholar",
+            "max_results": 20
+        },
+        {
+            "search_terms": [
+                "Smallpox"
+            ],
+            "search_operator": "AND",
+            "search_source": "PubMed",
+            "max_results": 20
+        },
+        {
+            "search_terms": [
+                "Anthrax"
+            ],
+            "search_operator": "AND",
+            "search_source": "PubMed",
+            "max_results": 20
+        },
+        {
+            "search_terms": [
+                "maleria"
+            ],
+            "search_operator": "AND",
+            "search_source": "BOTH",
+            "max_results": 20
+        },
+        {
+            "search_terms": [
+                "maleria"
+            ],
+            "search_operator": "AND",
+            "search_source": "PubMed",
+            "max_results": 20
+        },
+        {
+            "search_terms": [
+                "ebolla"
+            ],
+            "search_operator": "AND",
+            "search_source": "PubMed",
+            "max_results": 20
+        },
+        {
+            "search_terms": [
+                "ebola"
+            ],
+            "search_operator": "AND",
+            "search_source": "PubMed",
+            "max_results": 20
+        },
+        {
+            "search_terms": [
+                "ebola"
+            ],
+            "search_operator": "AND",
+            "search_source": "PubMed",
+            "max_results": 20
+        },
+        {
+            "search_terms": [
+                "ebola"
+            ],
+            "search_operator": "AND",
+            "search_source": "PubMed",
+            "max_results": 20
         }
     ]
 }

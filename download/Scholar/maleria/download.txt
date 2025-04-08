@@ -1,5 +1,0 @@
-Title: Experimental investigation on the performance of partially encased beams at the elevated and room temperature
-Authors: [{'name': 'PAG Piloto', 'link': 'https://scholar.google.com/citations?user=A78hpzYAAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=A78hpzYAAAAJ&engine=google_scholar_author&hl=en', 'author_id': 'A78hpzYAAAAJ'}, {'name': 'AB Ramos Gavilán', 'link': 'https://scholar.google.com/citations?user=gQ_kSb8AAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=gQ_kSb8AAAAJ&engine=google_scholar_author&hl=en', 'author_id': 'gQ_kSb8AAAAJ'}]
-Year: Unknown Year
-Source: PAG Piloto, AB Ramos Gavilán… - … n Fire Safety …, 2013 - Departamento de Engenharia Civil …
-URL: https://bibliotecadigital.ipb.pt/bitstreams/5d659ade-f3c5-4e46-a4fe-2700571409ed/download

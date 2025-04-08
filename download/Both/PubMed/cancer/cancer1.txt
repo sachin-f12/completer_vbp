@@ -1,7 +1,0 @@
-{
-    "Title": "Risk of subsequent primary neoplasms in survivors of adolescent and young adult cancer (Teenage and Young Adult Cancer Survivor Study): a population-based, cohort study",
-    "Authors": ", , , , , , , ",
-    "Journal": "The Lancet. Oncology",
-    "Date": "Unknown Date",
-    "Abstract": "No Abstract Available"
-}

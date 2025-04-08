@@ -1,5 +1,0 @@
-Title: The assessment of depression
-Authors: [{'name': 'AM Nezu', 'link': 'https://scholar.google.com/citations?user=nY0mhsMAAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=nY0mhsMAAAAJ&engine=google_scholar_author&hl=en', 'author_id': 'nY0mhsMAAAAJ'}, {'name': 'KS McClure', 'link': 'https://scholar.google.com/citations?user=NMBM894AAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=NMBM894AAAAJ&engine=google_scholar_author&hl=en', 'author_id': 'NMBM894AAAAJ'}, {'name': 'CM Nezu', 'link': 'https://scholar.google.com/citations?user=D-OtiUIAAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=D-OtiUIAAAAJ&engine=google_scholar_author&hl=en', 'author_id': 'D-OtiUIAAAAJ'}]
-Year: Unknown Year
-Source: AM Nezu, KS McClure, CM Nezu - … Depression: MCT, CBT, and …, 2015 - Wiley Online Library
-URL: https://students.aiu.edu/submissions/profiles/resources/onlineBook/h4u2n3_Handbook_of_Depression.pdf#page=56

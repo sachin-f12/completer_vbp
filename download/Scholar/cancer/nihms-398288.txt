@@ -1,5 +1,0 @@
-Title: The microcosmos of cancer
-Authors: [{'name': 'A Lujambio', 'link': 'https://scholar.google.com/citations?user=WcZIe8oAAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=WcZIe8oAAAAJ&engine=google_scholar_author&hl=en', 'author_id': 'WcZIe8oAAAAJ'}]
-Year: Unknown Year
-Source: A Lujambio, SW Lowe - Nature, 2012 - nature.com
-URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC3509753/pdf/nihms-398288.pdf

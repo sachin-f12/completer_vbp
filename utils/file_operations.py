@@ -97,11 +97,84 @@ def sanitize_filename(filename):
 
     return f"{name}{ext}" if ext else f"{name}"
 
+# def rename_downloaded_files(search_term, search_source):
+#     """
+#     Rename downloaded PDFs and corresponding TXT metadata files based on the search query.
+#     Returns a list of renamed file paths.
+#     """
+#     safe_search_term = sanitize_filename(search_term)
+#     renamed_files = []
+
+#     if search_source == "Google Scholar":
+#         output_dir = Path(f"download/Scholar/{safe_search_term}")
+#         renamed_files.extend(rename_files_in_folder(output_dir, safe_search_term))
+#     elif search_source == "PubMed":
+#         output_dir = Path(f"download/PubMed/{safe_search_term}")
+#         renamed_files.extend(rename_files_in_folder(output_dir, safe_search_term))
+#     elif search_source == "BOTH":
+#         output_dir_pubmed = Path(f"download/Both/PubMed/{safe_search_term}")
+#         output_dir_scholar = Path(f"download/Both/Scholar/{safe_search_term}")
+#         renamed_files.extend(rename_files_in_folder(output_dir_pubmed, safe_search_term))
+#         renamed_files.extend(rename_files_in_folder(output_dir_scholar, safe_search_term))
+#     else:
+#         logging.error(f"Invalid search source: {search_source}")
+#         return []
+
+#     return renamed_files  # Ensure function returns renamed files list
+
+# def rename_files_in_folder(folder_path, search_term):
+#     """
+#     Renames PDFs and corresponding TXT files sequentially in a folder.
+#     Ensures metadata TXT files are renamed alongside their corresponding PDFs.
+#     """
+#     if not folder_path.exists():
+#         logging.warning(f"Directory not found: {folder_path}")
+#         return []
+
+#     pdf_files = sorted(folder_path.glob("*.pdf"), key=os.path.getctime)
+#     renamed_files = []
+
+#     if not pdf_files:
+#         logging.warning(f"No PDFs found in {folder_path}")
+#         return []
+
+#     for index, pdf_file in enumerate(pdf_files, start=1):
+#         new_pdf_name = f"{search_term}{index}.pdf"
+#         new_pdf_path = folder_path / new_pdf_name
+
+#         # Check for corresponding TXT file before renaming the PDF
+#         original_txt_path = pdf_file.with_suffix('.txt')
+#         new_txt_name = f"{search_term}{index}.txt"
+#         new_txt_path = folder_path / new_txt_name
+
+#         # Rename TXT file first if it exists
+#         if original_txt_path.exists():
+#             try:
+#                 original_txt_path.rename(new_txt_path)
+#                 renamed_files.append(str(new_txt_path))
+#                 logging.info(f"Renamed {original_txt_path.name} → {new_txt_name}")
+#             except Exception as e:
+#                 logging.error(f"Error renaming {original_txt_path}: {e}")
+
+#         # Now rename the PDF
+#         try:
+#             pdf_file.rename(new_pdf_path)
+#             renamed_files.append(str(new_pdf_path))
+#             logging.info(f"Renamed {pdf_file.name} → {new_pdf_name}")
+#         except Exception as e:
+#             logging.error(f"Error renaming {pdf_file}: {e}")
+
+#     logging.info(f"Renaming process completed for {folder_path}")
+#     return renamed_files  # Return renamed file 
+
+import logging
+import os
+from pathlib import Path
+
+def sanitize_filename(filename):
+    return "".join(c for c in filename if c.isalnum() or c in "._- ").strip()
+
 def rename_downloaded_files(search_term, search_source):
-    """
-    Rename downloaded PDFs and corresponding TXT metadata files based on the search query.
-    Returns a list of renamed file paths.
-    """
     safe_search_term = sanitize_filename(search_term)
     renamed_files = []
 
@@ -120,49 +193,33 @@ def rename_downloaded_files(search_term, search_source):
         logging.error(f"Invalid search source: {search_source}")
         return []
 
-    return renamed_files  # Ensure function returns renamed files list
+    return renamed_files
 
 def rename_files_in_folder(folder_path, search_term):
-    """
-    Renames PDFs and corresponding TXT files sequentially in a folder.
-    Ensures metadata TXT files are renamed alongside their corresponding PDFs.
-    """
     if not folder_path.exists():
-        logging.warning(f"Directory not found: {folder_path}")
         return []
 
     pdf_files = sorted(folder_path.glob("*.pdf"), key=os.path.getctime)
     renamed_files = []
 
-    if not pdf_files:
-        logging.warning(f"No PDFs found in {folder_path}")
-        return []
-
     for index, pdf_file in enumerate(pdf_files, start=1):
         new_pdf_name = f"{search_term}{index}.pdf"
         new_pdf_path = folder_path / new_pdf_name
-
-        # Check for corresponding TXT file before renaming the PDF
         original_txt_path = pdf_file.with_suffix('.txt')
         new_txt_name = f"{search_term}{index}.txt"
         new_txt_path = folder_path / new_txt_name
 
-        # Rename TXT file first if it exists
         if original_txt_path.exists():
             try:
                 original_txt_path.rename(new_txt_path)
                 renamed_files.append(str(new_txt_path))
-                logging.info(f"Renamed {original_txt_path.name} → {new_txt_name}")
             except Exception as e:
                 logging.error(f"Error renaming {original_txt_path}: {e}")
 
-        # Now rename the PDF
         try:
             pdf_file.rename(new_pdf_path)
             renamed_files.append(str(new_pdf_path))
-            logging.info(f"Renamed {pdf_file.name} → {new_pdf_name}")
         except Exception as e:
             logging.error(f"Error renaming {pdf_file}: {e}")
 
-    logging.info(f"Renaming process completed for {folder_path}")
-    return renamed_files  # Return renamed file paths
+    return renamed_files

@@ -1,5 +1,0 @@
-Title: Update on malaria
-Authors: [{'name': 'Q Bassat', 'link': 'https://scholar.google.com/citations?user=j5OuULAAAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=j5OuULAAAAAJ&engine=google_scholar_author&hl=en', 'author_id': 'j5OuULAAAAAJ'}]
-Year: Unknown Year
-Source: R Varo, C Chaccour, Q Bassat - Medicina Clínica (English Edition), 2020 - Elsevier
-URL: https://diposit.ub.edu/dspace/bitstream/2445/202887/1/3.%20Postprint_Bassat_Q_Med_Clin_%28Barc%29_2020.pdf

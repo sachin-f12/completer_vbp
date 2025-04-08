@@ -26,10 +26,9 @@ def create_session():
     return session
 
 def search_pubmed(term, page=1, retries=RETRIES, backoff_factor=BACKOFF_FACTOR):
-    
     url = f"{PUBMED_SEARCH_URL}{term.replace(' ', '+')}&page={page}"
     session = create_session()
-    
+
     for attempt in range(retries):
         try:
             response = session.get(url, timeout=30)
@@ -123,94 +122,65 @@ def get_pdf_link(session, pmcid):
 
 def extract_metadata(html_content):
     soup = BeautifulSoup(html_content, "html.parser")
-    title = soup.find("h1").get_text(strip=True) if soup.find("h1") else "Unknown Title"
-    authors = ", ".join([a.get_text(strip=True) for a in soup.find_all("meta", attrs={"name": "citation_author"})])
-    journal = soup.find("meta", attrs={"name": "citation_journal_title"})
-    journal = journal["content"] if journal else "Unknown Journal"
-    date = soup.find("meta", attrs={"name": "citation_date"})
-    date = date["content"] if date else "Unknown Date"
-    abstract = soup.find("div", class_="abstract")
-    abstract = abstract.get_text(strip=True) if abstract else "No Abstract Available"
-    
+
+    # Try from meta tags first
+    title_tag = soup.find("meta", {"name": "citation_title"})
+    title = title_tag["content"] if title_tag else (soup.find("h1").get_text(strip=True) if soup.find("h1") else "Unknown Title")
+
+    authors = ", ".join([
+        tag["content"] for tag in soup.find_all("meta", {"name": "citation_author"})
+    ]) or "Unknown Authors"
+
+    journal_tag = soup.find("meta", {"name": "citation_journal_title"})
+    journal = journal_tag["content"] if journal_tag else "Unknown Journal"
+
+    date_tag = soup.find("meta", {"name": "citation_date"})
+    date = date_tag["content"] if date_tag else "Unknown Date"
+
+    # Try to find abstract from common divs or sections
+    abstract = "No Abstract Available"
+    abstract_div = soup.find("div", class_="abstract")
+    if abstract_div:
+        abstract = abstract_div.get_text(strip=True)
+    else:
+        # Try alternative containers
+        for header in soup.find_all(['h2', 'strong']):
+            if 'abstract' in header.get_text(strip=True).lower():
+                next_tag = header.find_next_sibling(['p', 'div'])
+                if next_tag:
+                    abstract = next_tag.get_text(strip=True)
+                    break
+
+    # Edited By / Notes
+    edited_by = "Not Mentioned"
+    for tag in soup.find_all(['p', 'div']):
+        txt = tag.get_text(strip=True).lower()
+        if txt.startswith("edited by") or txt.startswith("editor"):
+            edited_by = tag.get_text(strip=True)
+            break
+
+    # Published date or alternative info
+    published_tag = soup.find("meta", {"name": "citation_publication_date"})
+    published_date = published_tag["content"] if published_tag else date
+
+    # Citation, contact, fallback
+    citation = soup.find("meta", {"name": "citation_reference"})
+    citation_text = citation["content"] if citation else "Not Available"
+
+    contact = soup.find("meta", {"name": "citation_author_email"})
+    contact_email = contact["content"] if contact else "Not Available"
+
     return {
         "Title": title,
         "Authors": authors,
         "Journal": journal,
         "Date": date,
-        "Abstract": abstract
+        "Abstract": abstract,
+        "Edited By": edited_by,
+        "Published Date": published_date,
+        "Citation": citation_text,
+        "Contact": contact_email
     }
-    
-    
-
-
-# def download_pdf(pmcid, search_term, search_source="PubMed"):
-#     """Download the PDF, save metadata, and store it in a dynamically created search-term-based directory."""
-    
-#     # Sanitize search term to create a valid folder name
-#     safe_search_term = sanitize_filename(search_term)
-    
-#     # Determine correct storage directory
-#     if search_source == "BOTH":
-#         output_dir = Path(f"download/Both/PubMed/{safe_search_term}")
-#     else:
-#         output_dir = Path(f"download/PubMed/{safe_search_term}")
-    
-#     output_dir.mkdir(parents=True, exist_ok=True)
-    
-#     pdf_path = output_dir / f"{pmcid}.pdf"
-#     metadata_path = output_dir / f"{pmcid}.txt"
-    
-#     # Skip download if PDF already exists
-#     if pdf_path.exists() and pdf_path.stat().st_size > 1000:
-#         logging.info(f"PDF already exists: {pdf_path}")
-#         return str(pdf_path)
-    
-#     session = create_session()
-    
-#     try:
-#         # Fetch metadata and save it
-#         article_url = f"{BASE_URL}{pmcid}/"
-#         response = session.get(article_url, timeout=30)
-#         response.raise_for_status()
-#         metadata = extract_metadata(response.text)
-        
-#         with open(metadata_path, "w", encoding="utf-8") as f:
-#             json.dump(metadata, f, indent=4)
-        
-#         # Get PDF link
-#         pdf_url = get_pdf_link(session, pmcid)
-#         if not pdf_url:
-#             logging.error(f"Could not find PDF link for {pmcid}")
-#             return None
-        
-#         # Download PDF
-#         headers = {"User-Agent": USER_AGENT, "Accept": "application/pdf"}
-#         pdf_response = session.get(pdf_url, headers=headers, stream=True, timeout=30)
-#         pdf_response.raise_for_status()
-        
-#         with open(pdf_path, "wb") as f:
-#             for chunk in pdf_response.iter_content(chunk_size=CHUNK_SIZE):
-#                 if chunk:
-#                     f.write(chunk)
-        
-#         # Validate downloaded file
-#         if pdf_path.stat().st_size < 1000:
-#             pdf_path.unlink()
-#             logging.error(f"Downloaded file too small for {pmcid}")
-#             return None
-        
-#         logging.info(f"Successfully downloaded PDF: {pdf_path}")
-#         return str(pdf_path)
-    
-#     except requests.RequestException as e:
-#         logging.error(f"Failed to download PDF for {pmcid}: {e}")
-#         return None
-    
-#     finally:
-#         session.close()
-
-
-
 
 
 

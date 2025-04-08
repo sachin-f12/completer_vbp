@@ -1,5 +1,0 @@
-Title: How cancer arises
-Authors: [{'name': 'RA Weinberg', 'link': 'https://scholar.google.com/citations?user=1wq5H9oAAAAJ&hl=en&oi=sra', 'serpapi_scholar_link': 'https://serpapi.com/search.json?author_id=1wq5H9oAAAAJ&engine=google_scholar_author&hl=en', 'author_id': '1wq5H9oAAAAJ'}]
-Year: Unknown Year
-Source: RA Weinberg - Scientific American, 1996 - JSTOR
-URL: http://purdyplatypus.pbworks.com/w/file/fetch/61527783/Weinberg-tumor%20progression.pdf
